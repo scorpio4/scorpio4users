@@ -1,0 +1,91 @@
+<html>
+<head>
+<!--
+    <link href="../jscript/vendor/backbone-forms/templates/default.css" rel="stylesheet" />
+    <link href="../jscript/vendor/backbone-forms/templates/bootstrap.css" rel="stylesheet" />
+-->
+    <link rel="stylesheet" href="../theme/dark/application.css" />
+
+    <!-- 3rd party JS libraries -->
+    <script type="text/javascript" src="../jscript/vendor/jquery/1.7.1/jquery.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/underscore/1.4.2/underscore.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/backbone/1.0/backbone.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/mustache/0.5.0-dev/mustache.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/bootstrap/2.0.2/bootstrap.js"></script>
+
+    <!-- Backbone-forms libraries -->
+    <script src="../jscript/vendor/backbone-forms/backbone-forms.min.js"></script>
+    <script src="../jscript/vendor/backbone-forms/editors/list.min.js"></script>
+    <script src="../jscript/vendor/backbone-forms/templates/bootstrap.js"></script>
+    <style>
+        #form { overflow-y: scroll; max-height: 500px }
+    </style>
+</head>
+<body>
+<div class='box tex well' style="overflow-y: scroll">
+    <div id="form" class='black-box'></div>
+</div>
+<script type="text/javascript">
+/*, options: ['Mr', 'Mrs', 'Ms']
+
+    name:       'Text',
+    email:      { type: 'Text', validators: ['required', 'email'] },
+    birthday:   'Date',
+    password:   'Password',
+    notes:      { type: 'List', listType: 'Select', options: ['A', 'B', 'C'] }
+*/
+    var User = Backbone.Model.extend({
+    });
+
+    var curator = new User();
+
+    var form = new Backbone.Form({ className: "black-box text", model: curator,
+        schema: {
+            description:      { title: "Description", type: 'TextArea' },
+            justification:    { title: "Business Justification", type: 'TextArea' },
+            domains:          { title: "Domains", type: 'List', itemType: 'Select', options: ['Domain A', 'Domain B', 'Domain C'] },
+            valueType:        { title: "Value Type", type: 'Select', options: ['Type A', 'Type B', 'Type C'] },
+            dataType:         { title: "Data Type", type: 'Select', options: ['Data A', 'Data B', 'Data C'] },
+            logic:            { title: "Logic", type: 'TextArea' },
+
+            minCardinality:   { title: "Min", type: 'Text', dataType: "integer" },
+            maxCardinality:   { title: "Max", type: 'Text', dataType: "integer" },
+
+            valueRangeMin:   { title: "Min", type: 'Text', dataType: "integer" },
+            valueRangeMax:   { title: "Min", type: 'Text', dataType: "integer" },
+            valueRangeDefault:   { title: "Default", type: 'Text', dataType: "integer" },
+
+            stringLengthMin:   { title: "Min", type: 'Text', dataType: "integer" },
+            stringLengthMax:   { title: "Min", type: 'Text', dataType: "integer" },
+            stringLengthDefault:   { title: "Default", type: 'Text', dataType: "integer" },
+        },
+        fieldsets: [
+            {
+                legend: "Descriptions", align: "right",
+                fields: [ "description", "justification" ]
+            },
+            {
+                legend: "Data Definitions",
+                fields: [ "domains", "valueType", "dataType", "logic" ]
+            },
+            {
+                legend: "Cardinality",
+                fields: [ "minCardinality", "maxCardinality" ]
+            },
+            {
+                legend: "Value Range",
+                fields: [ "valueRangeMin", "valueRangeMax", "valueRangeDefault" ]
+            },
+            {
+                legend: "String Range",
+                fields: [ "stringLengthMin", "stringLengthMax", "stringLengthDefault" ]
+            }
+
+        ]
+    }).render();
+    $('#form').append(form.el);
+    console.log("Form: %o", form);
+
+</script>
+</body>
+</html>

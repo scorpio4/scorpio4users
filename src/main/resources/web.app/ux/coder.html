@@ -1,0 +1,191 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>UX:Coder</title>
+    <meta name="description" content="FactCore">
+    <meta name="author" content="Lee Curtis">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../jscript/vendor/bootstrap/2.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../jscript/vendor/jquery/1.9.1/css/smoothness/jquery-ui-1.10.2.custom.min.css" />
+
+    <!--
+<link href="../jscript/vendor/backbone-forms/templates/default.css" rel="stylesheet" />
+<link href="../jscript/vendor/backbone-forms/templates/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../jscript/vendor/jmpress/jmpress.css">
+-->
+
+    <link rel="stylesheet" href="../css/local.css">
+
+    <!-- 3rd party JS libraries -->
+    <script type="text/javascript" src="../jscript/vendor/jquery/1.8.3/jquery.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/jquery/1.8.3/jquery-ui-1.10.2.custom.min.js"></script>
+
+    <script type="text/javascript" src="../jscript/vendor/bootstrap/2.3.1/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="../jscript/vendor/underscore/1.4.2/underscore.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/backbone/1.0/backbone.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/marionette/backbone.marionette.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/mustache/0.5.0-dev/mustache.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/rdfquery/latest/jquery.rdfquery.debug.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/backbone-forms/backbone-forms.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/backbone-forms/editors/list.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/jStorage/jstorage.js"></script>
+
+    <script type="text/javascript"  src="../jscript/vendor/bootstrap-tree/js/bootstrap-tree.js"></script>
+    <link   rel='stylesheet'        href="../jscript/vendor/bootstrap-tree/css/bootstrap-tree.css"/>
+
+    <script type='text/javascript' src='../jscript/vendor/layout/jquery.layout.js'></script>
+
+    <!-- Backgrid -->
+    <script type='text/javascript' src='../jscript/vendor/backgrid/backgrid.js'></script>
+    <script type='text/javascript' src='../jscript/vendor/backgrid/extensions/select-all/backgrid-select-all.js'></script>
+
+    <link rel='stylesheet' href='../jscript/vendor/backgrid/backgrid.css'/>
+    <link rel='stylesheet' href='../jscript/vendor/backgrid/extensions/select-all/backgrid-select-all.css'/>
+
+    <!-- TreeView -->
+    <script type="text/javascript" src="../jscript/vendor/jstree/jquery.jstree.js"></script>
+
+    <script type="text/javascript" src="../jscript/vendor/treecat/jquery.treecat.js"></script>
+
+
+    <!-- Local Bootstrap Code -->
+    <script type="text/javascript" src="../jscript/local/core/EventRouter.js"></script>
+    <script type="text/javascript" src="../jscript/local/core/RDFQueryBuilder.js"></script>
+    <script type="text/javascript" src="../jscript/local/core/I18N.js"></script>
+    <script type="text/javascript" src="../jscript/local/FactCore.js"></script>
+    <script type="text/javascript" src="../jscript/local/fact/CoreFinder.js"></script>
+    <script type="text/javascript" src="../jscript/local/fact/FactFacet.js"></script>
+
+    <!-- Local UX Views -->
+
+    <script type="text/javascript" src="../jscript/local/ux/Breadcrumbs.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Carousel.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Concept.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/CodeBlock.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Dashboard.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Form.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Dashboard3D.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Grid.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/GraphCompass.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Layout.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/List.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/NavBar.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/MenuButton.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Image.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Query.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Tabs.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Tiles.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Tree.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/WorkSpace.js"></script>
+
+    <script type="text/javascript" src="../jscript/vendor/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/blockly/language/en/_messages.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/CodeBlock/language.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/CodeBlock/factory.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/CodeBlock/predicates.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/CodeBlock/situations.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/CodeBlock/actions.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/CodeBlock/decide.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/CodeBlock/expressions.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/CodeBlock/variables.js"></script>
+
+    <script type="text/javascript" src="coder.js"></script>
+    <style>
+        body {
+        background-color: white;
+        font-family: sans-serif;
+        }
+        h1 {
+        font-weight: normal;
+        font-size: 140%;
+        }
+        h3 {
+        margin-bottom: 1px;
+        }
+        iframe {
+        border: 1px solid #ccc;
+        }
+        td {
+        vertical-align: top;
+        }
+        iframe, textarea, table {
+        height: 100%;
+        width: 100%;
+        resize: none;
+        }
+    </style>
+    <style>
+        html, body {
+        background-color: #fff;
+        margin: 0;
+        padding:0;
+        overflow: hidden;
+        }
+        .blocklySvg {
+        height: 100%;
+        width: 100%;
+        }
+    </style>
+    <script>
+    </script>
+</head>
+<body xonload="init()">
+<table>
+    <tr>
+        <td height="99%" width='60%'>
+            <div id='codeblock'>CodeBlock: loading ...</div>
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td height="4%">
+                        <h3>Preview:</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="30%">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td height="3%">
+                        <h3>Language code:</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="30%">
+                        <textarea id="languageTextarea" readonly="readonly" wrap="off"
+                                  onfocus="this.select()"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="3%">
+                        <h3>Generator stub:
+                            <select id="language" onchange="updateGenerator()">
+                                <option value="JavaScript">JavaScript</option>
+                                <option value="Dart">Dart</option>
+                                <option value="Python">Python</option>
+                            </select>
+                        </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="30%">
+                        <textarea id="generatorTextarea" readonly="readonly" wrap="off"
+                                  onfocus="this.select()"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

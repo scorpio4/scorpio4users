@@ -1,0 +1,327 @@
+body {
+	background-color: #EEEEEE;
+}
+
+.selectable { cursor: hand; }
+.active { background: #333333; color: #FFFFFF; }
+
+.ux_widget {
+  background-color: #fafafa;
+  background-image: -moz-linear-gradient(top, white, #f2f2f2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#f2f2f2));
+  background-image: -webkit-linear-gradient(top, white, #f2f2f2);
+  background-image: -o-linear-gradient(top, white, #f2f2f2);
+  background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFF2F2F2', GradientType=0);
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+}
+.overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0, 0, 0, 0.85);
+    background: url(data:;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAABl0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuNUmK/OAAAAATSURBVBhXY2RgYNgHxGAAYuwDAA78AjwwRoQYAAAAAElFTkSuQmCC) repeat scroll transparent\9; /* ie fallback png background image */
+    z-index:9999;
+    color:white;
+}
+
+.bv_capsicum {
+	background-image:url("../img/jalapeno/bg/business_view.png");
+	width: 630px;
+	height: 450px;
+	padding: 100px 0 0 170px;
+	margin: 200px auto;
+	border: 4px outset #333333;
+}
+
+.bv_cell {
+	width: 140px;
+	height: 125px;
+	float: left;
+	margin: 15px;
+	background-size: contain;
+}
+
+.bv_cell:hover {
+	margin: 14px;
+	border: 1px solid #333333;
+}
+
+.bv_compliance {
+	background-image:url("../img/jalapeno/cells/COMPLIANCE.png");
+}
+.bv_condition {
+	background-image:url("../img/jalapeno/cells/CONDITION.png");
+}
+.bv_context {
+	background-image:url("../img/jalapeno/cells/CONTEXT.png");
+}
+.bv_entitlement {
+	background-image:url("../img/jalapeno/cells/ENTITLEMENT.png");
+}
+.bv_intent {
+	background-image:url("../img/jalapeno/cells/INTENT.png");
+}
+.bv_outcome {
+	background-image:url("../img/jalapeno/cells/OUTCOME.png");
+}
+.bv_resource {
+	background-image:url("../img/jalapeno/cells/RESOURCE.png");
+}
+.bv_role {
+	background-image:url("../img/jalapeno/cells/ROLE.png");
+}
+.bv_undertaking {
+	background-image:url("../img/jalapeno/cells/UNDERTAKING.png");
+}
+
+
+.ux_modal {
+	min-width: 20%;
+	max-width: 90%;
+}
+
+.ux_concept {
+	width: 100%;
+	height:300px;
+	margin-top: 0px;
+	margin-left:auto;
+	margin-right: auto;
+	background-image:url("../img/jalapeno/bg/concept_viewer.png");
+	background-size: 100%;
+
+}
+
+.ux_explorer .modal-body {
+	max-height: 800px;
+	min-height: 300px;
+	margin-top: 0px;
+	margin-left:auto;
+	margin-right: auto;
+
+}
+
+.capsicum_business_cell {
+	cursor: pointer;
+}
+
+.capsicum_business_cell img {
+	width: 200px;
+	height: 180px;
+	padding: 0;
+	margin: 0;
+}
+.capsicum_business_cell:hover {
+	border 2px solid #cccccc;
+}
+
+.align-center {
+	margin: 0 auto;
+}
+
+#search {
+	margin-top: 5px;
+}
+
+.ux_toolbar {
+	margin: 0 5px 0 5px;
+}
+.ux_tree {
+	min-height: 300px;
+	max-height: 800px;
+	overflow-y: scroll;
+}
+.ux_tree ul {
+	list-style-type: square !important;
+    margin: 0 0 0 0 !important;
+    padding: 0 0 0 15px !important;
+}
+
+.nav tab-pane {
+	max-height: 500px;
+	overflow-y: scroll;
+}
+
+
+.tab-header {
+	padding-right: 10px;
+}
+
+.tab-header i {
+	margin-right: 5px;
+}
+
+.hovering {
+}
+
+.modal_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #888;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  width: 100%;
+  height: 100%;
+  z-index: 20000;
+}
+
+
+// JS PLUMB
+
+body {
+	text-align:center;
+}
+
+.node {
+	position:absolute;
+	border-radius:5px;
+	font-size:12px;
+	text-align: center;
+	z-index:2;
+	padding: 4px;
+
+	background-color: white;
+	color: #333333;
+	cursor:pointer;
+	box-shadow: 0px 0px 19px #666;
+}
+
+.center {
+	max-height:180px;
+	min-height:100px;
+	min-width:150px;
+	overflow:scroll;
+}
+
+.node.small {
+	width:70px;
+	font-size:11px;
+	box-shadow: 0px 0px 12px #999;
+}
+
+.center img {
+	width:60px;
+	height:55px;
+	margin: 0 auto;
+}
+
+.node.small img {
+	width:70px;
+	height:65px;
+}
+
+.node-title {
+	background-color:WhiteSmoke;
+	padding:3px;
+	border-radius: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color:#888;
+}
+
+.center .node-title {
+	min-height:30px;
+	max-height:60px;
+	text-align: left;
+}
+
+.center .node-title span {
+	padding-left:10px;
+}
+
+.small .node-title {
+	position: absolute;
+	top: 45px;
+	left: 2px;
+	color: white;
+	background-color: #a74a44;
+	width: 60px;
+	height: 15px;
+	padding:3px;
+	padding-top:1px;
+}
+
+.node-attributes {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+	font-size: 11px;
+	color: gray;
+	border-collapse: collapse;
+	padding: 8px;
+	margin-top: 5px;
+}
+
+.node-attributes td {
+	border:1px solid WhiteSmoke;
+}
+
+/*
+
+.north .node-icon {
+	background-image:url("../Jalapeno Icons/Asset.png");
+}
+
+.south .node-icon {
+	background-image:url("../Jalapeno Icons/Place.png");
+}
+
+.west .node-icon {
+	background-image:url("../Jalapeno Icons/Record.png");
+}
+
+.east .node-icon {
+	background-image:url("../Jalapeno Icons/Person.png");
+}
+*/
+
+div._jsPlumb_overlay {
+	border:1px solid #cdcdcd;
+	border-radius: 2px;
+	color:#3b3b42;
+	cursor: pointer;
+}
+
+._jsPlumb_connector path {
+	stroke:#adadad;
+}
+
+._jsPlumb_connector._jsPlumb_hover path {
+	stroke:#a74a44;
+	cursor: pointer;
+}
+
+._jsPlumb_overlay {
+	fill:#3b3b42;
+}
+
+._jsPlumb_overlay {
+	font-size:11px;
+	background-color:white;
+	padding:2px;
+}
+
+//
+
+table.box.table-striped tbody tr:nth-child(odd) td {
+	color: #333333 !important;
+}
+
+table.box.table-striped tbody tr:nth-child(even) td {
+	color: #555555 !important;
+}
+.typeahead {
+	overflow-x: hidden;
+}

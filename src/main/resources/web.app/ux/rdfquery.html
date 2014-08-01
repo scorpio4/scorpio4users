@@ -1,0 +1,140 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>RQ: Example</title>
+    <meta name="description" content="Grid Demo">
+    <meta name="author" content="Fact:Core">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!--
+        BROWSER BEAUTIFICATION
+-->
+    <link rel="shortcut icon" href="../img/favicons/favicon.png">
+    <!-- For everything else -->
+    <link rel="shortcut icon" href="../img/favicons/favicon.ico">
+    <!-- For retina screens -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/favicons/apple-touch-icon-retina.png">
+    <!-- For iPad 1-->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/favicons/apple-touch-icon-ipad.png">
+    <!-- For iPhone 3G, iPod Touch and Android -->
+    <link rel="apple-touch-icon-precomposed" href="../img/favicons/apple-touch-icon.png">
+
+    <!-- iOS web-app metas -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Startup image for web apps -->
+    <link rel="apple-touch-startup-image" href="../img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+    <link rel="apple-touch-startup-image" href="../img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+    <link rel="apple-touch-startup-image" href="../img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+
+
+    <!-- bootstrap -->
+
+    <link rel="stylesheet" href="../jscript/vendor/bootstrap/2.0.2/css/bootstrap.css" />
+    <link rel="stylesheet" href="../jscript/vendor/bootstrap/2.0.2/css/bootstrap.icon-large.css" />
+
+
+    <link rel="stylesheet" href="../jscript/vendor/slickgrid/2.0.1/slick.grid.css">
+    <link rel="stylesheet" href="../jscript/vendor/timeline/20120520/css/timeline.css">
+    <link rel="stylesheet" href="../jscript/vendor/roundabout/roundabout.css">
+
+    <!-- Recline CSS components -->
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/flot.css">
+    <link rel="stylesheet" href="../css/transform.css">
+    <link rel="stylesheet" href="../css/multiview.css">
+
+    <link rel="stylesheet" href="../jscript/vendor/toolbar/jquery.toolbars.css">
+
+    <!-- 3rd party JS libraries -->
+    <script type="text/javascript" src="../jscript/vendor/jquery/1.7.1/jquery.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/underscore/1.4.2/underscore.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/backbone/1.0/backbone.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/mustache/0.5.0-dev/mustache.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/bootstrap/2.0.2/bootstrap.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/marionette/backbone.marionette.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/marionette/backbone.babysitter.js"></script>
+
+    <!--[if lte IE 8]>
+    <script language="javascript" type="text/javascript" src="../jscript/vendor/flot/excanvas.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../jscript/vendor/flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/leaflet/0.4.4/leaflet.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/leaflet.markercluster/leaflet.markercluster.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/slickgrid/2.0.1/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/slickgrid/2.0.1/jquery.event.drag-2.0.min.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/slickgrid/2.0.1/slick.grid.min.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/moment/1.6.2/moment.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/timeline/20120520/js/timeline.js"></script>
+
+    <script language="javascript" type="text/javascript" src="../jscript/vendor/json/json2.js"></script>
+
+    <!--
+    ## Just use the all in one library version rather than individual files
+
+    <script type="text/javascript" src="dist/recline.js"></script>
+
+    -->
+
+    <!-- model and backends -->
+    <script type="text/javascript" src="../jscript/vendor/recline/src/ecma-fixes.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/model.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/backend.memory.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/backend.dataproxy.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/backend.gdocs.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/backend.elasticsearch.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/backend.csv.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/backend.ckan.js"></script>
+    <!--
+    <script type="text/javascript" src="../jscript/vendor/recline/src/backend.solr.js"></script>
+    -->
+
+    <!-- Recline Plugins -->
+    <script type="text/javascript" src="../jscript/vendor/recline/src/data.transform.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/widget.pager.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/widget.queryeditor.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/widget.filtereditor.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/widget.facetviewer.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/widget.fields.js"></script>
+
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.grid.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.slickgrid.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.transform.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.flot.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.graph.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.map.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.timeline.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.multiview.js"></script>
+
+    <!-- Carousel -->
+    <script type="text/javascript" src="../jscript/vendor/roundabout/jquery.roundabout.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/toolbar/jquery.toolbar.js"></script>
+
+    <!-- Template-based Widgets -->
+    <script type="text/javascript" src="../jscript/vendor/jarvis/jarvis.widget.min.js"></script>
+
+
+    <!-- Backbone-forms libraries -->
+    <script src="../jscript/vendor/backbone_forms/backbone-forms.min.js"></script>
+    <script src="../jscript/vendor/backbone_forms/editors/list.min.js"></script>
+    <script src="../jscript/vendor/backbone_forms/templates/bootstrap.js"></script>
+
+    <!-- Local Bootstrap Code -->
+    <script language="javascript" type="text/javascript" src="../jscript/vendor/rdfquery/latest/jquery.rdfquery.debug.js"></script>
+    <script type="text/javascript" src="../jscript/local/core/EventRouter.js"></script>
+    <script type="text/javascript" src="../jscript/local/FactCore.js"></script>
+    <script type="text/javascript" src="rdfquery.js"></script>
+</head>
+<body>
+<div id="my_factcore">
+
+</div>
+
+</body>
+</html>
