@@ -1,0 +1,140 @@
+package com.factcore.vendor.nms;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.net.*;
+import java.util.*;
+
+/* ****************************************************************************************
+
+	(c) Lee Curtis 2000-2012. All rights reserved.
+	Architect:	Lee Curtis
+	Developer:	Troven Software
+
+	*** This software is proprietary and commercial in confidence ***
+	Please visit www.factcore.com/legal/ for instructions, licensing, products and services.
+
+	Portions: (c) 2000-2011 Troven Software. Used under license.
+
+***************************************************************************************** */
+
+/**
+	IPv4Range is a utility class with various strategies for generating Lists of InetAddresses.
+
+	TODO: support wildcards 192.168.*.*
+	TODO: support ranges 192.168.[1-3].*
+**/
+
+public class IPv4Range {
+    private static final Logger log = LoggerFactory.getLogger(IPv4Range.class);
+
+    public IPv4Range() {
+    }
+
+	public List<InetAddress> getAddresses(InetAddress inet1, InetAddress inet2) {
+		List ips = new ArrayList();
+		long ip_start = getLong(inet1);
+		long ip_end = getLong(inet2);
+		InetAddress inet = null;
+		for (long i=ip_start;i<=ip_end;i++) {
+			inet = getAddress(i);
+			if (inet!=null) ips.add(inet);
+		}
+		return ips;
+	}
+
+	public List<InetAddress> getAddresses(String hosts) {
+        List<InetAddress> ips = new ArrayList();
+        String ip = null;
+        StringTokenizer tox = new StringTokenizer(hosts,",:; ");
+        while (tox.hasMoreTokens()) {
+            ip = tox.nextToken();
+            addAddresses(ips, ip);
+        }
+		return ips;
+	}
+
+    private void addAddresses(List<InetAddress> ips, String ip) {
+        InetAddress inet = null;
+        int ix_range = ip.indexOf("-");
+        if (ix_range>0) {
+            String start = ip.substring(0,ix_range).trim();
+            String end = ip.substring(ix_range+1).trim();
+            long startIPv4 = getLong(start), endIPv4 = getLong(end);
+            System.err.println("-> range: "+start+"("+startIPv4+") --> "+end+" ("+endIPv4+")");
+            for(long i=startIPv4;i<=endIPv4;i++) {
+                System.err.println(" address #: "+i);
+                inet = getAddress(i);
+                if (inet!=null) ips.add(inet);
+            }
+        } else {
+            inet = getAddress(ip);
+            System.err.println(" added: "+ip+" -->"+inet);
+            if (inet!=null) ips.add(inet);
+        }
+    }
+
+    public static InetAddress[] getAddresses(InetAddress inet1, long mask) {
+		return null;
+	}
+
+	public static long getLong(InetAddress host) {
+		long ip = 0, _byte;
+		byte[] bytes = host.getAddress();
+		for (int i=0;i<bytes.length;i++) {
+			_byte = (bytes[i]<0?bytes[i]+256:bytes[i]);
+			ip+=(_byte*Math.pow(256,3-i));
+		}
+		return ip;
+	}
+
+	public static long getLong(String host) {
+		long ip = 0, _byte;
+		int i =0;
+		StringTokenizer tox = new StringTokenizer(host,".");
+		while (tox.hasMoreTokens()) {
+			_byte = Long.parseLong(tox.nextToken());
+			ip+=(_byte*Math.pow(256,3-i));
+			i++;
+		}
+		return ip;
+	}
+
+    public InetAddress getAddress(String ip) {
+        return getAddress(getLong(ip));
+    }
+
+    public InetAddress getAddress(long ip) {
+		return getAddress(ip,true);
+	}
+
+    //TODO: faulty.
+
+	public InetAddress getAddress(long ip, boolean check) {
+System.err.println("#->ip: "+ip);
+		try {
+// construct a byte array containing our 4 octets
+			byte[] _bytes = new byte [4];
+            _bytes[0] = (byte)((ip&0xff000000)>>24);
+            _bytes[1] = (byte)((ip&0xff0000)>>16);
+            _bytes[2] = (byte)((ip&0xff00)>>8);
+            _bytes[3] = (byte)((ip&0xff));
+System.err.println("IP: bytes: "+ip+" -> "+_bytes[0]+" ==> "+ Arrays.toString(_bytes));
+			InetAddress addr = InetAddress.getByAddress(_bytes);
+            System.err.println("getAddress: "+addr.getCanonicalHostName());
+			return addr;
+		} catch(java.net.UnknownHostException e) {
+			return null;
+		}
+	}
+
+    private boolean isValid(byte b) {
+		return isValid(b,false);
+	}
+
+	private boolean isValid(byte b,boolean no_zero) {
+		if (!no_zero) return (b!=(byte)-1);
+		else return (b!=(byte)0)&&(b!=(byte)-1);
+	}
+}
