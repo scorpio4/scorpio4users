@@ -1,0 +1,35 @@
+# W3C - RDF & RDFS
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: 		<http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+@prefix mime: 		<http://www.iana.org/assignments/media-types/>.
+@prefix eg: 		<http://example.org/>.
+
+# Scorpio4 Active Vocabularies
+@prefix flo: 		<http://scorpio4.com/v1/vocab/flo/>.
+@prefix bean: 		<http://scorpio4.com/v1/vocab/bean/>.
+@prefix asq: 		<http://scorpio4.com/v1/vocab/asq/>.
+@prefix core: 		<http://scorpio4.com/v1/vocab/>.
+
+@prefix : 			<http://scorpio4demo.com/v1/quickstart/>.
+
+# ----------------------------------------------------------------------------------------
+
+:	a				core:Runtime, core:Recipe;
+	rdfs:label		"Scorpio4 QuickStart";
+	rdfs:comment	"Scorpio4 Kernel";
+.
+# ----------------------------------------------------------------------------------------
+
+:	flo:from	<jetty:http://0.0.0.0:9090/www/>.
+
+
+<jetty:http://0.0.0.0:9090/www/{this}>	flo:to	( :www ).
+
+:www	core:hasAsset """
+
+
+
+"""^^<http://www.iana.org/assignments/media-types/application/x-groovy>.
+

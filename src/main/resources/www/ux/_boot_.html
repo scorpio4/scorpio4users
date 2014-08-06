@@ -1,0 +1,169 @@
+<html>
+<head>
+    <link href="/rest/asset/www/jscript/vendor/backbone-forms/templates/default.css" rel="stylesheet" />
+    <link href="/rest/asset/www/jscript/vendor/backbone-forms/templates/bootstrap.css" rel="stylesheet" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Scorpio4 - {{app}}</title>
+    <meta name="description" content="scorpio4">
+    <meta name="author" content="Lee Curtis">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- bootstrap -->
+
+    <link rel="stylesheet" href="/rest/asset/www/jscript/vendor/bootstrap/2.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/rest/asset/www/theme/flat-ui/css/flat-ui.css" />
+    <link rel="stylesheet" href="/rest/asset/www/jscript/vendor/jquery/1.9.1/css/smoothness/jquery-ui-1.10.2.custom.min.css" />
+    <link rel="stylesheet" href="/rest/asset/www/css/font-awesome.css">
+
+    <link rel="stylesheet" href="/rest/asset/www/jscript/vendor/jmpress/jmpress.css">
+    <link rel="stylesheet" href="../css/local.css">
+
+    <!-- 3rd party JS libraries -->
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/jquery/1.8.3/jquery.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/jquery/1.8.3/jquery-ui-1.10.2.custom.min.js"></script>
+
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/bootstrap/2.3.1/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/underscore/1.4.2/underscore.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/backbone/1.0/backbone.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/marionette/backbone.marionette.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/mustache/0.5.0-dev/mustache.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/rdfquery/latest/jquery.rdfquery.debug.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/backbone-pageable/backbone-pageable.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/backbone-forms/backbone-forms.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/backbone-forms/editors/list.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/jStorage/jstorage.js"></script>
+
+    <script type="text/javascript"  src="/rest/asset/www/jscript/vendor/bootstrap-tree/js/bootstrap-tree.js"></script>
+    <link   rel='stylesheet'        href="/rest/asset/www/jscript/vendor/bootstrap-tree/css/bootstrap-tree.css"></script>
+
+    <!-- Visual Search -->
+    <script type="text/javascript"  src="/rest/asset/www/jscript/vendor/visualsearch/visualsearch.js"></script>
+    <link   rel='stylesheet'        href="/rest/asset/www/jscript/vendor/visualsearch/visualsearch-datauri.css"></script>
+    <link   rel='stylesheet'        href="/rest/asset/www/jscript/vendor/visualsearch/visualsearch.css"></script>
+
+    <!-- HTML Editor-->
+    <!--
+        <script type="text/javascript"  src="/rest/asset/www/jscript/vendor/bootstrap-wysiwyg/bootstrap-wysiwyg.js"></script>
+    -->
+
+    <script type="text/javascript"  src="/rest/asset/www/jscript/vendor/bootstrap-wysiwyg5/wysihtml5-0.3.0.js"></script>
+    <script type="text/javascript"  src="/rest/asset/www/jscript/vendor/bootstrap-wysiwyg5/bootstrap-wysihtml5-0.0.2.js"></script>
+    <link   rel='stylesheet' href='/rest/asset/www/jscript/vendor/bootstrap-wysiwyg5/bootstrap-wysihtml5-0.0.2.css'/>
+
+    <!-- JS Plumb -->
+    <script type='text/javascript' src='/rest/asset/www/jscript/vendor/jsPlumb/jquery.jsPlumb-1.4.1-all-min.js'></script>
+    <script type='text/javascript' src='/rest/asset/www/jscript/vendor/jsPlumb/jsPlumbToolkit-0.1-all.js'></script>
+
+    <script type='text/javascript' src='/rest/asset/www/jscript/vendor/layout/jquery.layout.js'></script>
+
+    <!-- Backgrid -->
+    <script type='text/javascript' src='/rest/asset/www/jscript/vendor/backgrid/backgrid.js'></script>
+    <script type='text/javascript' src='/rest/asset/www/jscript/vendor/backgrid/extensions/select-all/backgrid-select-all.js'></script>
+    <script type='text/javascript' src='/rest/asset/www/jscript/vendor/backgrid/extensions/paginator/backgrid-paginator.js'></script>
+
+    <link   rel='stylesheet' href='/rest/asset/www/jscript/vendor/backgrid/backgrid.css'/>
+    <link   rel='stylesheet' href='/rest/asset/www/jscript/vendor/backgrid/extensions/select-all/backgrid-select-all.css'/>
+    <link   rel='stylesheet' href='/rest/asset/www/jscript/vendor/backgrid/extensions/paginator/backgrid-paginator.css'/>
+
+    <!-- TreeView -->
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/jstree/jquery.jstree.js"></script>
+
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/treecat/jquery.treecat.js"></script>
+
+    <!-- Selector 2 (tags)-->
+    <script type="text/javascript" src="/rest/asset/www/jscript/vendor/select2/select2.js"></script>
+    <link   rel='stylesheet'       href="/rest/asset/www/jscript/vendor/select2/select2.css"></script>
+
+
+    <!-- Local Bootstrap Code -->
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/core/EventRouter.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/core/I18N.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/scorpio4.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/asq/Common.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/asq/RDF.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/asq/JSON.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/fact/CoreFinder.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/fact/DummyFinder.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/fact/RemoteFinder.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/fact/LocalFinder.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/fact/FactFacet.js"></script>
+    <script type='text/javascript' src='/rest/asset/www/jscript/local/fact/jsPlumb.loader.js'></script>
+
+    <!-- Local UX Widgets -->
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/ASQ.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Breadcrumbs.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Calendar.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Carousel.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/CodeBlock.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Concept.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Dashboard.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Dashboard3D.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Design.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/DropZone.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/FacetFilter.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Form.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/GraphCompass.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Grid.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/HTML.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Image.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Layout.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/List.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/MenuButton.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/NavBar.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Query.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/RichText.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Tabs.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/TagSelect.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Templater.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Toolbar.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Tiles.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/Tree.js"></script>
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/WorkSpace.js"></script>
+
+    <script type="text/javascript" src="/rest/asset/www/jscript/local/ux/WorkSpace.js"></script>
+
+    <script type="text/javascript" src="/rest/asset/www/ux/{{app}}.js"></script>
+
+    <style>
+        .ux_factualizedx:hover { border: 1px solid blue; }
+        .active { border: 2px solid red; z-index: 20000 !important; }
+        .ux_dashboard3d { width: 100%; height: 100%; background: #f0f0f0; }
+        .row-fluid [class*="span"] { margin-left:0px !important}
+        #my_facet { width: 100%; height: 100% }
+        .step { min-width: 400px; min-height: 300px; background: #FFFFFF; }
+        .slide { background: #CCCCCC; }
+        .ux_sample { margin-left: 10px;  }
+        .ux_sample .ux_toggled { font-size: 0.8em; display: none; }
+        .ux_sample:hover .ux_toggled { font-size: 0.8em; display: block}
+        .ux_draggable { padding: 5px; border: 1px solid #ff00ff; max-width: 50% }
+        .ux_drop_hover { background: #FF00FF }
+        .ux_design { background: #F8F8F8; min-height: 400px; }
+        .ux_fact { padding: 4px; background: #CCCCCC; }
+        textarea { width: auto !important; }
+
+        .ux_html_block { background: #CCCCCC; color: #000033; padding: 4px; border: 1px solid #000033; }
+        .ux_html_view { padding: 10px 0 10px 0; ; cursor: pointer; line-height: 1.2em;}
+        .ux_html_view:hover { background: #F8F8F8; }
+
+        .ux_preview { float: left; min-width: 200px; max-width: 600; zoom: 0.9; background: #FCFCFC; border: 2px solid #333333; margin-left: 50px; margin-top: 10px;}
+        .ux_document_section { background: #FFFFFF; width: 800px; border: 2px solid #FFFFFF; padding: 10px; }
+        .ux_document_section:hover { border: 2px dotted #DDDDDD; }
+
+        .ux_panel { max-width: 90% !important; }
+
+    </style>
+</head>
+<body>
+
+<div id="my_navbar">Scorpio4 - {{app}}</div>
+<div id="my_scorpio4">Scorpio4 - {{app}}</div>
+
+</body>
+</html>

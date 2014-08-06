@@ -1,6 +1,6 @@
 package com.scorpio4.vendor.nms.ping;
 /*
- *   Fact:Core - CONFIDENTIAL
+ *   Scorpio4 - CONFIDENTIAL
  *   Unpublished Copyright (c) 2009-2014 Lee Curtis, All Rights Reserved.
  *
  *   NOTICE:  All information contained herein is, and remains the property of Lee Curtis. The intellectual and technical concepts contained
@@ -16,7 +16,8 @@ package com.scorpio4.vendor.nms.ping;
  *   TO REPRODUCE, DISCLOSE OR DISTRIBUTE ITS CONTENTS, OR TO MANUFACTURE, USE, OR SELL ANYTHING THAT IT  MAY DESCRIBE, IN WHOLE OR IN PART.
  *
  */
-import com.factcore.util.Stopwatch;
+
+import com.scorpio4.util.Stopwatch;
 
 import java.net.InetAddress;
 import java.net.InterfaceAddress;

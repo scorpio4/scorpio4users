@@ -1,0 +1,2 @@
+# Module com.scorpio4.vendor.vaadin.WidgetSet
+# RPC service class, partial path of RPC policy file

@@ -1,2 +1,0 @@
-# Module com.factcore.vendor.vaadin.WidgetSet
-# RPC service class, partial path of RPC policy file

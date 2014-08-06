@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 import java.io.StringWriter;
 
 /**
- * Fact:Core (c) 2013
+ * Scorpio4 (c) 2013
  * Module: com.factcore.vendor.smackx
  * User  : lee
  * Date  : 27/03/2014

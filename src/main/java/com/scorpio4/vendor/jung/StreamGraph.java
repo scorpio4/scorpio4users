@@ -1,6 +1,6 @@
 package com.scorpio4.vendor.jung;
 /*
- *   Fact:Core - CONFIDENTIAL
+ *   Scorpio4 - CONFIDENTIAL
  *   Unpublished Copyright (c) 2009-2014 Lee Curtis, All Rights Reserved.
  *
  *   NOTICE:  All information contained herein is, and remains the property of Lee Curtis. The intellectual and technical concepts contained
@@ -23,7 +23,7 @@ import edu.uci.ics.jung.graph.Graph;
 import edu.uci.ics.jung.graph.SparseMultigraph;
 
 /**
- * Fact:Core (c) 2013
+ * Scorpio4 (c) 2013
  * Module: com.factcore.vendor.jung
  * User  : lee
  * Date  : 12/01/2014

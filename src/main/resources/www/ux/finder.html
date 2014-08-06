@@ -1,0 +1,130 @@
+<html>
+<head>
+    <link href="../jscript/vendor/backbone-forms/templates/default.css" rel="stylesheet" />
+    <link href="../jscript/vendor/backbone-forms/templates/bootstrap.css" rel="stylesheet" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Fact:Finder</title>
+    <meta name="description" content="scorpio4">
+    <meta name="author" content="Lee Curtis">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../jscript/vendor/bootstrap/2.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../jscript/vendor/jquery/1.9.1/css/smoothness/jquery-ui-1.10.2.custom.min.css" />
+    <link rel="stylesheet" href="../jscript/vendor/leaflet/0.4.4/leaflet.css">
+    <link rel="stylesheet" href="../jscript/vendor/leaflet.markercluster/MarkerCluster.css">
+    <link rel="stylesheet" href="../jscript/vendor/leaflet.markercluster/MarkerCluster.Default.css">
+    <link rel="stylesheet" href="../jscript/vendor/timeline/20120520/css/timeline.css">
+    <link rel="stylesheet" href="../jscript/vendor/roundabout/roundabout.css">
+    <link rel="stylesheet" href="../jscript/vendor/slickgrid/2.1/slick.grid.css">
+    <!--
+    -->
+    <!--
+    <link rel="stylesheet" href="../css/slickgrid.css">
+    -->
+
+    <!-- Recline CSS components -->
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/flot.css">
+    <link rel="stylesheet" href="../css/transform.css">
+    <link rel="stylesheet" href="../css/map.css">
+    <link rel="stylesheet" href="../css/multiview.css">
+    <link rel="stylesheet" href="../css/local.css">
+
+    <!--
+        <link rel="stylesheet" href="../jscript/jBreadcrumb/Styles/Base.css" type="text/css">
+        <link rel="stylesheet" href="../jscript/jBreadcrumb/Styles/BreadCrumb.css" type="text/css">
+    -->
+    <!-- 3rd party JS libraries -->
+    <script type="text/javascript" src="../jscript/vendor/jquery/1.8.3/jquery.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/jquery/1.8.3/jquery-ui-1.10.2.custom.min.js"></script>
+
+    <!--
+        <script type="text/javascript" src="../jscript/vendor/jquery/1.8.3/jquery.mb.browser.min.js"></script>
+        <script type="text/javascript" src="../jscript/vendor/slickgrid/2.0.1/jquery-ui-1.8.16.custom.min.js"></script>
+    -->
+    <script type="text/javascript" src="../jscript/vendor/bootstrap/2.3.1/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="../jscript/vendor/underscore/1.4.2/underscore.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/backbone/1.0/backbone.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/marionette/backbone.marionette.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/mustache/0.5.0-dev/mustache.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/rdfquery/latest/jquery.rdfquery.debug.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/backbone-forms/backbone-forms.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/backbone-forms/editors/list.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/jStorage/jstorage.js"></script>
+
+
+    <script type='text/javascript' src='../jscript/vendor/layout/jquery.layout.js'></script>
+    <link   rel='stylesheet' href='../jscript/vendor/layout/layout.css'/>
+
+    <!-- Backgrid -->
+    <script type='text/javascript' src='../jscript/vendor/backgrid/backgrid.js'></script>
+    <script type='text/javascript' src='../jscript/vendor/backgrid/extensions/select-all/backgrid-select-all.js'></script>
+
+    <link   rel='stylesheet' href='../jscript/vendor/backgrid/backgrid.css'/>
+    <link   rel='stylesheet' href='../jscript/vendor/backgrid/extensions/select-all/backgrid-select-all.css'/>
+
+    <!-- TreeView -->
+    <script type="text/javascript" src="../jscript/vendor/jstree/jquery.jstree.js"></script>
+
+    <!-- model and backends -->
+    <script type="text/javascript" src="../jscript/vendor/recline/src/ecma-fixes.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/model.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/backend.memory.js"></script>
+
+    <!-- Recline Plugins -->
+    <script type="text/javascript" src="../jscript/vendor/recline/src/data.transform.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/widget.pager.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/widget.queryeditor.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/widget.filtereditor.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/widget.facetviewer.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/widget.fields.js"></script>
+
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.grid.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.transform.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.flot.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.graph.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.map.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.timeline.js"></script>
+    <script type="text/javascript" src="../jscript/vendor/recline/src/view.multiview.js"></script>
+
+    <!-- Local Bootstrap Code -->
+    <script type="text/javascript" src="../jscript/local/core/EventRouter.js"></script>
+    <script type="text/javascript" src="../jscript/local/core/RDFQueryBuilder.js"></script>
+    <script type="text/javascript" src="../jscript/local/core/I18N.js"></script>
+    <script type="text/javascript" src="../jscript/local/scorpio4.js"></script>
+    <script type="text/javascript" src="../jscript/local/fact/CoreFinder.js"></script>
+
+    <!-- Local UX Views -->
+
+    <script type="text/javascript" src="../jscript/local/ux/Grid.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Tree.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Tabs.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Tiles.js"></script>
+    <script type="text/javascript" src="../jscript/local/ux/Concept.js"></script>
+
+
+    <script type="text/javascript" src="finder.js"></script>
+</head>
+<body>
+    <div class='container-fluid'>
+        <div class="row-fluid">
+            <div id="left" class='span4'>
+                <div><input id="search" type="text" data-provide="typeahead"/></div>
+                <div id="business_view"></div>
+            </div>
+            <div id="right" class='span8'>
+                <table id="resource_view" class="table table-striped table-bordered table-hover table-condensed"></table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
