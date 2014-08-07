@@ -60,6 +60,7 @@ public class ASQContainer implements Container {
 		Map<String, Term> termMap = asq.getBindings();
 		for(String termKey: termMap.keySet()) {
 			Term term = termMap.get(termKey);
+			if (termKey.startsWith("?")) termKey=termKey.substring(1);
 			propertyClasses.put(termKey, term.getTypeClass());
 		}
 	}

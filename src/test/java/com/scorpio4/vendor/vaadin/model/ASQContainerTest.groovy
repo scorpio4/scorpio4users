@@ -33,7 +33,6 @@ class ASQContainerTest extends GroovyTestCase {
 		assert asqContainer.getContainerPropertyIds().contains("this");
 	}
 
-
 	public void testContainerQuery() {
 		MockEngine engine = new MockEngine();
 		engine.provision("scorpio4/index.n3");
@@ -83,6 +82,5 @@ class ASQContainerTest extends GroovyTestCase {
 			def item = (MapItem) asqContainer.getItem(it);
 			println "> "+item.getValueMap();
 		}
-
 	}
 }
