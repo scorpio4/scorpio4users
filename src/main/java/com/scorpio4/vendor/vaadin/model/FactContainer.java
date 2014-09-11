@@ -2,7 +2,7 @@ package com.scorpio4.vendor.vaadin.model;
 
 import com.scorpio4.fact.stream.FactStream;
 import com.scorpio4.iq.bean.ConvertsType;
-import com.scorpio4.iq.bean.XSD2POJOConverter;
+import com.scorpio4.util.bean.XSD2POJOConverter;
 import com.scorpio4.oops.FactException;
 import com.vaadin.data.Container;
 import com.vaadin.data.Item;

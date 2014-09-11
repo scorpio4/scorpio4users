@@ -3,7 +3,7 @@ package com.scorpio4.vendor.vaadin.model;
 import com.scorpio4.asq.ASQ;
 import com.scorpio4.asq.core.Term;
 import com.scorpio4.asq.sparql.SelectSPARQL;
-import com.scorpio4.iq.bean.XSD2POJOConverter;
+import com.scorpio4.util.bean.XSD2POJOConverter;
 import com.scorpio4.oops.FactException;
 import com.scorpio4.template.PicoTemplate;
 import com.scorpio4.util.IdentityHelper;
