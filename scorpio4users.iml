@@ -137,10 +137,6 @@
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
     <orderEntry type="library" name="Maven: net.sourceforge.nekohtml:nekohtml:1.9.20" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.30" level="project" />
-    <orderEntry type="library" name="Maven: org.semarglproject:semargl-sesame:0.6.1" level="project" />
-    <orderEntry type="library" name="Maven: org.semarglproject:semargl-core:0.6.1" level="project" />
-    <orderEntry type="library" name="Maven: org.semarglproject:semargl-rdfa:0.6.1" level="project" />
-    <orderEntry type="library" name="Maven: org.semarglproject:semargl-rdf:0.6.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.jsonld-java:jsonld-java-sesame:0.3" level="project" />
     <orderEntry type="library" name="Maven: com.github.jsonld-java:jsonld-java:0.3" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.3.1" level="project" />
